@@ -4,11 +4,11 @@ Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycke
 ## Inlämning
 * Code review är efter lunch fredagen den 2/1.
 * Senaste tiden för inlämning är kl. 8.00 måndagen den 5/1. Det som kommer efter det bedömmer vi inte om det inte finns rimliga skäl. 
-* Klona detta repo och använd som grund.
 * Ni lämnar in genom att pusha till er GitHub med namnet "Planned Planthood".
 * När ni pushat upp sista ändringen skriver ni lärarchatten i lärarchatten och meddelar oss med länk till koden. Om ni inte meddelar bedömmer vi den i det skick den är vid deadline, commits efter detta kommer ignoreras.
   
 ## Krav
+* Klona detta repo och använd som grund.
 * Använd de variabler ni anser aktuella av de ni får i style.css som grund för sidans design
 * Ni ska lösa uppgiften enligt den design som anges i bilderna
 * Sidan ska vara responsiv i övergångarna mellan mobil-tablet-desktop
