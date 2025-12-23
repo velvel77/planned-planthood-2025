@@ -11,7 +11,7 @@
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 * {
-  margin: 0;
+  margin: 0;  
   padding: 0;
   font: inherit;
 }
@@ -180,6 +180,27 @@ body {
   color: var(--clr-primary-dark);
 }
 
+.site-header__menu {
+  font-weight: var(--fw-medium);
+}
+
+/* Background colors */
+
+.site-header,
+.main-body__eye-catcher {
+  background-color: var(--clr-neutral-100);
+}
+
+.site-footer {
+  background-color: var(--clr-green-400);
+}
+
+/* Font colors */
+
+.site-footer > *,
+.site-footer__link {
+  color: var(--clr-neutral-100);
+}
 
 /*** Composition ***/
 .flow>*+* {
@@ -223,6 +244,83 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   grid-column: fullwidth;
 }
 
+/* --- Individual Styling --- */
+
+
+/* Header */
+.site-header,
+.site-header__menu {
+  display: flex;
+}
+
+.site-header__logo,
+.site-header__link {
+  text-decoration: none;
+}
+
+.site-header {
+  justify-content: space-between;
+  padding-inline: clamp(2rem, 20vw, 15rem);
+  padding-block: 0.5rem;
+}
+
+.site-header__menu {
+  gap: 1em;
+}
+
+/* Body */
+
+.main-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.main-body__eye-catcher {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body__eye-catcher:last-of-type {
+  gap: 5em;
+}
+
+.main-body__catch-wrapper {
+  display: grid; 
+  max-width: 30%;
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.main-body__catch-heading {
+  text-align: left;
+}
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: clamp(2rem, 10vw, 30rem);
+  padding-block: 0.5rem;
+  justify-items: space-between;
+}
+
+.site-footer__about {
+  margin-left: 3em;
+}
+
+.site-footer__menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.site-footer__about {
+  max-width: 60%;
+}
 
 /*** Utilities ***/
 
