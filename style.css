@@ -202,6 +202,20 @@ body {
   color: var(--clr-neutral-100);
 }
 
+/* Font size */
+
+/* Margin and padding */
+
+.site-header {
+  padding-block: 1rem;
+  padding-inline: clamp(2rem, 20vw, 15rem);
+}
+
+.main-body__content-cell,
+.main-body__eye-catcher {
+  padding-block: 2.5rem;
+}
+
 /*** Composition ***/
 .flow>*+* {
   margin-block-start: var(--flow-space);
@@ -260,21 +274,46 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 .site-header {
   justify-content: space-between;
-  padding-inline: clamp(2rem, 20vw, 15rem);
-  padding-block: 0.5rem;
 }
 
 .site-header__menu {
   gap: 1em;
 }
 
-/* Body */
+/* --- Body --- */
 
-.main-body {
+/* Content cell */
+.main-body,
+.main-body__content-cell {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
 }
+
+.main-body__content-cell {
+  width: 30%;
+  gap: 1em;
+}
+
+@media (width < 440px) {
+  .main-body__content-cell {
+    width: 100%;
+  }
+}
+
+.main-body__heading,
+.main-body__text {
+  text-align: center;
+}
+
+
+@media (width < 440px) {
+  .main-body__heading {
+    text-wrap: nowrap;
+  }
+}
+
+/* Eye-catcher */
 
 .main-body__eye-catcher {
   display: flex;
@@ -292,10 +331,27 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   max-width: 30%;
   grid-template-columns: 1fr;
   justify-items: start;
+  gap: 1em;
 }
 
 .main-body__catch-heading {
   text-align: left;
+}
+
+.main-body__icon-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-green-400);
+  border-radius: 50%
+
+}
+
+.main-body__planting-icon {
+  width: 50%;
+  height: 50%;
 }
 
 /* Footer */
