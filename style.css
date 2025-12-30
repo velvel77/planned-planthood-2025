@@ -274,6 +274,10 @@ body {
   padding-block: 2.5rem;
 }
 
+.main-body__collage {
+  margin-bottom: 3rem;
+}
+
 .main-body__card-body {
   padding-inline: 1rem;
 }
@@ -387,12 +391,17 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 @media (width < 880px) {
+  .site-header {
+    padding-inline: 2rem;
+  }
+
   .site-header__menu {
     display: none;
   }
 
   .site-header__hamburger {
     display: block;
+    padding-right: 0;
     
     &:hover {
       content: url("./assets/images/icon-menu-white.svg");
@@ -444,15 +453,71 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   }
 }
 
+/* Collage */
+
+.main-body__collage {
+  display: grid;
+  width: clamp(400px, 50%, 800px);
+  max-width: 100%;
+  border: 1rem solid white;
+  grid-template-areas:
+    "a a b c d d"
+    "a a e e f f";
+}
+
+@media (width < 660px) {
+
+  .main-body__collage {
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+}
+
+.main-body__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-body__image:nth-child(1) {
+  grid-area: a;
+}
+
+.main-body__image:nth-child(2) {
+  grid-area: b;
+}
+
+.main-body__image:nth-child(3) {
+  grid-area: c;
+}
+
+.main-body__image:nth-child(4) {
+  grid-area: d;
+}
+
+.main-body__image:nth-child(5) {
+  grid-area: e;
+}
+
+.main-body__image:nth-child(6) {
+  grid-area: f;
+}
+
 /* Cards */
 
 .main-body__cards {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1em;
 }
 
-.main-body__cards {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+@media (width < 660px) {
+  .main-body__cards {
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  }
 }
 
 .main-body__card {
@@ -512,6 +577,12 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   gap: clamp(0.2em, 15vw, 2em);
 }
 
+@media (width < 660px) {
+  .main-body__eye-catcher {
+    flex-direction: column;
+  }
+}
+
 .main-body__eye-catcher:last-of-type {
   gap: 5em;
   margin-bottom: 2.5em;
@@ -540,10 +611,18 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 }
 
+@media (width < 660px) {
+  .main-body__icon-wrapper {
+    order: -1;
+    flex-direction: column;
+  }
+}
+
 .main-body__planting-icon {
   width: 50%;
   height: 50%;
 }
+
 
 /* Footer */
 
