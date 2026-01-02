@@ -254,10 +254,25 @@ body {
 
 /* Font size */
 
+.main-body__category,
+.main-body__profile-wrapper > * {
+  font-size: var(--fs-200);
+}
+
+
 /* Font weight */
 
-.site-header__text {
+.site-header__text,
+.main-body__category {
   font-weight: var(--fw-500);
+}
+
+.main-body__profile-name {
+  font-weight: var(--fw-600);
+}
+
+.site-footer__contact {
+  font-weight: var(--fw-700);
 }
 
 /* Margin and padding */
@@ -283,7 +298,7 @@ body {
 }
 
 .main-body__category-wrapper {
-  margin-top: 1.5em;
+  margin-top: 0.8em;
 }
 
 .main-body__profile {
@@ -431,7 +446,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .main-body__card-cell {
-  width: 50%;
+  width: 60%;
 }
 
 @media (width < 440px) {
@@ -457,7 +472,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 .main-body__collage {
   display: grid;
-  width: clamp(400px, 50%, 800px);
+  width: clamp(400px, 60%, 800px);
   max-width: 100%;
   border: 1rem solid white;
   grid-template-areas:
@@ -562,11 +577,11 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  gap: 0.5em;
+  gap: 0.2em;
 }
 
 .main-body__category {
-  padding: 0.2em;
+  padding: 0.5em;
   border-radius: 2em;
 }
 
@@ -576,11 +591,18 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   margin-top: auto;
 }
 
+.main-body__profile-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-body__profile-image {
+  width: 40px;
+  height: 40px;
   border-radius: 50%
 }
 
@@ -591,7 +613,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.2em, 15vw, 2em);
+  gap: clamp(0.2em, 10vw, 2em);
 }
 
 @media (width < 660px) {
@@ -601,20 +623,32 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .main-body__eye-catcher:last-of-type {
-  gap: 5em;
   margin-bottom: 2.5em;
 }
 
 .main-body__catch-wrapper {
   display: grid; 
-  max-width: 30%;
+  max-width: 25%;
   grid-template-columns: 1fr;
   justify-items: start;
   gap: 1em;
 }
 
+@media (width < 660px) {
+  .main-body__catch-wrapper {
+    max-width: 90%;
+    justify-items: center;
+  }
+}
+
 .main-body__catch-heading {
   text-align: left;
+}
+
+@media (width < 660px) {
+  .main-body__catch-heading {
+    text-align: center;
+  }
 }
 
 .main-body__icon-wrapper {
@@ -629,9 +663,11 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 @media (width < 660px) {
+
+  
+
   .main-body__icon-wrapper {
     order: -1;
-    flex-direction: column;
   }
 }
 
