@@ -535,9 +535,26 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .main-body__card-image {
   min-height: 15em;
   box-sizing: border-box;
+  width: 100%;
   overflow: hidden;
-  aspect-ratio: 16 / 19;
+  aspect-ratio: 4 / 4;
   object-fit: cover;
+}
+
+.main-body__image-wrapper {
+  position: relative;
+}
+
+
+.main-body__image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/images/icon-watermark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 3em 3em;
+  opacity: 0.5;
 }
 
 .main-body__category-wrapper {
