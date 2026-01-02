@@ -188,7 +188,8 @@ body {
 
 .site-header,
 .main-body__eye-catcher,
-.main-body__card {
+.main-body__card,
+.main-body__email {
   background-color: var(--clr-neutral-100);
 }
 
@@ -649,6 +650,29 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   .main-body__catch-heading {
     text-align: center;
   }
+}
+
+.main-body__form {
+  position: relative;
+  display: inline-block;
+}
+
+.main-body__email {
+  border-radius: 15px;
+  padding: 0.3em;
+  padding-right: 5rem;
+}
+
+.main-body__btn--submit {
+  position: absolute;
+  padding: 0.2em 0.5em;
+  margin-right: 0.2em;
+  border-radius: 15px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
 }
 
 .main-body__icon-wrapper {
