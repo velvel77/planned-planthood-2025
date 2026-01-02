@@ -237,13 +237,16 @@ body {
   background-color: var(--clr-fast);
 }
 
-.site-footer {
+.site-footer,
+.main-body__btn--submit,
+.main-body__link {
   background-color: var(--clr-green-400);
 }
 
 /* Font colors */
 
 .main-body__category,
+.main-body__link,
 .site-footer > *,
 .site-footer__link {
   color: var(--clr-neutral-100);
@@ -417,7 +420,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
   .site-header__hamburger {
     display: block;
-    padding-right: 0;
     
     &:hover {
       content: url("./assets/images/icon-menu-white.svg");
@@ -614,10 +616,10 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.2em, 10vw, 2em);
+  gap: clamp(0.2em, 5vw, 3em);
 }
 
-@media (width < 660px) {
+@media (width < 880px) {
   .main-body__eye-catcher {
     flex-direction: column;
   }
@@ -628,14 +630,15 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .main-body__catch-wrapper {
-  display: grid; 
+  display: grid;
+  width: clamp(20rem, 15%, 40rem); 
   max-width: 25%;
   grid-template-columns: 1fr;
   justify-items: start;
   gap: 1em;
 }
 
-@media (width < 660px) {
+@media (width < 880px) {
   .main-body__catch-wrapper {
     max-width: 90%;
     justify-items: center;
@@ -646,7 +649,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   text-align: left;
 }
 
-@media (width < 660px) {
+@media (width < 880px) {
   .main-body__catch-heading {
     text-align: center;
   }
@@ -663,16 +666,30 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   padding-right: 5rem;
 }
 
+.main-body__btn--submit,
+.main-body__link {
+  border: 1px solid var(--clr-green-400);
+  border-radius: 15px;
+  padding: 0.2em 0.5em;
+
+  &:hover {
+    color: var(--clr-green-400);
+    background-color: var(--clr-neutral-100);
+    text-decoration: none;
+  }
+}
+
 .main-body__btn--submit {
   position: absolute;
-  padding: 0.2em 0.5em;
   margin-right: 0.2em;
-  border-radius: 15px;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  border: none;
   cursor: pointer;
+}
+
+.main-body__link {
+  justify-self: end;
 }
 
 .main-body__icon-wrapper {
@@ -686,7 +703,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 }
 
-@media (width < 660px) {
+@media (width < 880px) {
 
   
 
