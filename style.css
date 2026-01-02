@@ -654,6 +654,12 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   align-items: center;
 }
 
+@media (width < 660px) {
+  .site-footer__menu {
+    display: none;
+  }
+}
+
 /*** Utilities ***/
 
 .visually-hidden {
