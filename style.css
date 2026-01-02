@@ -531,7 +531,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   gap: 1em;
 }
 
-
 @media (width < 660px) {
   .main-body__cards {
     grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
@@ -551,9 +550,9 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .main-body__card-image {
-  min-height: 15em;
   box-sizing: border-box;
   width: 100%;
+  min-height: 15em;
   overflow: hidden;
   aspect-ratio: 4 / 4;
   object-fit: cover;
@@ -661,8 +660,8 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 }
 
 .main-body__email {
-  border-radius: 15px;
-  padding: 0.3em;
+  border-radius: 20px;
+  padding: 0.4em;
   padding-right: 5rem;
 }
 
@@ -670,7 +669,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .main-body__link {
   border: 1px solid var(--clr-green-400);
   border-radius: 15px;
-  padding: 0.2em 0.5em;
+  padding: 0.3em 0.5em;
 
   &:hover {
     color: var(--clr-green-400);
@@ -681,7 +680,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 
 .main-body__btn--submit {
   position: absolute;
-  margin-right: 0.2em;
+  margin-right: 0.20em;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -723,8 +722,7 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
 .site-footer {
   display: flex;
   justify-content: space-between;
-  padding-inline: clamp(2rem, 22vw, 30rem);
-  justify-items: space-between;
+  padding-inline: clamp(2rem, 18vw, 30rem);
 }
 
 .site-footer__about,
@@ -739,8 +737,25 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   gap: 1rem;
 }
 
-.site-footer__contact {
+@media (width < 660px) {
+  .site-footer {
+    padding-inline: 0;
+  }
+
+  .site-footer__about {
+    margin-inline: 2em;
+    max-width: 90%;
+    gap: 1rem;
+  }
+}
+
+.site-footer__contact,
+.site-footer__wrapper {
   display: flex;
+  gap: 0.5em;
+}
+
+.site-footer__contact {
   flex-direction: column;
 }
 
